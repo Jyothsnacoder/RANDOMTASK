@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>CLICK HERE</button>
+    <p></p>
+  </body>
+  <script>
+    let btn = document.getElementsByTagName("button");
+    let arr = [
+      "We must use time as a tool, not as a couch...",
+      "Punctuality is the thief of time...",
+      "Tough time never lasts, but tough people do...",
+      "Time is what we want most, but what we use worst....",
+      "The trouble is you think you have time....",
+      "Better three hours too soon than a minute too late....",
+    ];
+    btn[0].addEventListener('click',()=>{
+      let p1=document.getElementsByTagName("p")
+      p1[0].innerHTML=arr[parseInt(Math.random()*arr.length)]
+      p1[0].style.fontSize="50px"
+      p1[0].style.fontStyle="italic"
+    })
+    // const div1 = document.getElementById("btn");
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    document.addEventListener("click", function () {
+      document.body.style.backgroundColor = getRandomColor();
+    });
+  </script>
+</html>
+
